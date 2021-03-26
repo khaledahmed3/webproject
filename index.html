@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <title>Authentication</title>
+  </head>
+
+  <body>
+    <div class="login-reg-panel">
+      <div class="login-info-box">
+        <h2>Have an account?</h2>
+        <label id="label-register" for="log-reg-show">Login</label>
+        <input
+          type="radio"
+          name="active-log-panel"
+          id="log-reg-show"
+          checked="checked"
+        />
+      </div>
+
+      <div class="register-info-box">
+        <h2>Don't have an account?</h2>
+        <label id="label-login" for="log-login-show">Register</label>
+        <input type="radio" name="active-log-panel" id="log-login-show" />
+      </div>
+
+      <div class="white-panel">
+        <div class="login-show">
+          <h2>LOGIN</h2>
+          <form action="./server/Login.Controller.php" method="post">
+            <input type="text" name="username" placeholder="username" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+        <div class="register-show">
+          <h2>REGISTER</h2>
+          <form action="./server/Registration.Controller.php" method="post">
+            <input type="text" name="username" placeholder="username" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="submit" value="Register" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="./assets/javascript/bootstrap.min.js"></script>
+    <script src="./assets/javascript/jquery.min.js"></script>
+    <script src="./assets/javascript/main.js"></script>
+  </body>
+</html>
